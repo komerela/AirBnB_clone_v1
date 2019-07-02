@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 '''
 '''
 import json
@@ -10,7 +10,6 @@ class FileStorage:
     '''
     __objects = {}
     __file_path = 'file.json'
-    @property
     def file_path(self):
         return FileStorage.__file_path
     def all(self):
@@ -26,13 +25,14 @@ class FileStorage:
         '''
         '''
         try:
-            with open('file.json', "r") as f:
+            with open(FileStorage._FileStorage__file_path, "r") as f:
                 list_of_dicts = FileStorage.from_json_string(f.read())
         except FileNotFoundError:
             list_of_dicts = []
         for each in list_of_dicts:
         # use eval to make this flexible
-            BaseModel(each)
+            print('TYPE OF EACH DICT', type(each))
+            BaseModel(**each)
     def from_json_string(json_string):
         '''convert json string of obj dicts into list of same'''
         if json_string is None or json_string == "":

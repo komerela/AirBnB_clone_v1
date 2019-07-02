@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 '''
 '''
 from datetime import datetime
@@ -43,7 +43,7 @@ class BaseModel:
         self.updated_at = datetime.utcnow()
         list_of_dicts = [obj.to_dict() for (key, obj) in models.storage.all().items()]
         print(type(list_of_dicts))
-        with open(models.storage.file_path, "w+", encoding="utf-8") as f:
+        with open(models.storage.file_path(), "w+", encoding="utf-8") as f:
             f.write(json.dumps(list_of_dicts))
     def to_dict(self):
         '''
