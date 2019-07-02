@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-'''
+'''This module contains one class, BaseModel
 '''
 from datetime import datetime
 import json
@@ -8,10 +8,10 @@ from uuid import uuid4
 
 
 class BaseModel:
-    '''
+    '''BaseModel handles serialization/deserialization
     '''
     def __init__(self, *args, **kwargs):
-        '''
+        '''Initialize object with kwargs if present
         '''
         if kwargs:
             print('entered kwargs')
@@ -34,16 +34,13 @@ class BaseModel:
             self.updated_at = self.created_at
         models.storage.new(self)
 
-    def save(self):
-        models.storage.save()
-
     def __str__(self):
-        '''
+        '''print all objects attributes
         '''
         return("[BaseModel] ({:s}) {:s}".format(self.id, str(self.__dict__)))
 
     def save(self):
-        '''
+        '''save all objects into json file
         '''
         self.updated_at = datetime.utcnow()
         list_of_dicts = [obj.to_dict() for (key, obj) in
@@ -53,7 +50,7 @@ class BaseModel:
             f.write(json.dumps(list_of_dicts))
 
     def to_dict(self):
-        '''
+        '''return dictionary of object's attributes
         '''
         mydict = self.__dict__.copy()
         mydict["__class__"] = "BaseModel"
