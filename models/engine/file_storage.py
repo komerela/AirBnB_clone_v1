@@ -10,16 +10,21 @@ class FileStorage:
     '''
     __objects = {}
     __file_path = 'file.json'
+
     def file_path(self):
         return FileStorage.__file_path
+
     def all(self):
         '''
         '''
         return FileStorage.__objects
+
     def new(self, obj):
         '''
         '''
-        FileStorage.__objects['{}.{}'.format(obj.__class__.__name__, obj.id)] = obj
+        FileStorage.__objects['{}.{}'.format(obj.__class__.__name__,
+                              obj.id)] = obj
+
     def reload(self):
         pass
         '''
@@ -30,9 +35,10 @@ class FileStorage:
         except FileNotFoundError:
             list_of_dicts = []
         for each in list_of_dicts:
-        # use eval to make this flexible
+            # use eval to make this flexible
             print('TYPE OF EACH DICT', type(each))
             BaseModel(**each)
+
     def from_json_string(json_string):
         '''convert json string of obj dicts into list of same'''
         if json_string is None or json_string == "":
