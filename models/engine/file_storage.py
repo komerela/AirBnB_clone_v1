@@ -36,7 +36,6 @@ class FileStorage:
             list_of_dicts = []
         for each in list_of_dicts:
             # use eval to make this flexible
-            print('TYPE OF EACH DICT', type(each))
             BaseModel(**each)
 
     def from_json_string(json_string):
