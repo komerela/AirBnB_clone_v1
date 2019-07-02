@@ -26,10 +26,16 @@ class FileStorage:
         '''
         '''
         try:
-            with open(self.file_path, "r") as f:
-                list_of_dicts = json.load(f)
+            with open('file.json', "r") as f:
+                list_of_dicts = FileStorage.from_json_string(f.read())
         except FileNotFoundError:
             list_of_dicts = []
         for each in list_of_dicts:
         # use eval to make this flexible
             BaseModel(each)
+    def from_json_string(json_string):
+        '''convert json string of obj dicts into list of same'''
+        if json_string is None or json_string == "":
+            return []
+        else:
+            return json.loads(json_string)
