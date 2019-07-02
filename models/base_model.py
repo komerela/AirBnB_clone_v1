@@ -14,7 +14,6 @@ class BaseModel:
         '''Initialize object with kwargs if present
         '''
         if kwargs:
-            print('entered kwargs')
             for (key, value) in kwargs.items():
                 if key == '__class__':
                     continue
@@ -45,7 +44,6 @@ class BaseModel:
         self.updated_at = datetime.utcnow()
         list_of_dicts = [obj.to_dict() for (key, obj) in
                          models.storage.all().items()]
-        print(type(list_of_dicts))
         with open(models.storage.file_path(), "w+", encoding="utf-8") as f:
             f.write(json.dumps(list_of_dicts))
 
