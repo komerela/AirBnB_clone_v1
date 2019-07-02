@@ -33,9 +33,6 @@ class FileStorage:
         for each in list_of_dicts:
         # use eval to make this flexible
             BaseModel(each)
-
-
-
     def from_json_string(json_string):
         '''convert json string of obj dicts into list of same'''
         if json_string is None or json_string == "":
