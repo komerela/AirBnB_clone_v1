@@ -23,12 +23,17 @@ class BaseModel:
             self.id = kwargs['id']
             self.created_at = dateutil.parser.parse(kwargs['created_at'])
             self.updated_at = dateutil.parser.parse(kwargs['updated_at'])
+
     def save(self):
+        '''
+        '''
         models.storage.save()
+
     def __str__(self):
         '''
         '''
         return("[BaseModel] ({:s}) {:s}".format(self.id, str(self.__dict__)))
+
     def save(self):
         '''
         '''
@@ -38,6 +43,7 @@ class BaseModel:
         with open(models.storage.file_path, "w", encoding="utf-8") as f:
             json.dump(objects_dict, f)
         self.updated_at = datetime.now()
+
     def to_dict(self):
         '''
         '''
