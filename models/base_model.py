@@ -2,7 +2,6 @@
 '''
 '''
 from datetime import datetime
-import dateutil.parser
 import json
 import models
 from uuid import uuid4
@@ -15,19 +14,23 @@ class BaseModel:
         '''
         '''
         if kwargs:
-            print('UPDATING FROM DICT---------------------------------------------')
+            print('entered kwargs')
             for (key, value) in kwargs.items():
-                if key in ('updated_at', 'created_at'):
-                    self.key = dateutil.parser.parse(value)
-                elif key == '__class__':
+                if key == '__class__':
                     continue
+                elif key == "created_at":
+                    self.created_at = datetime.strptime(value, "%Y-%m-%dT%H:%M:%S.%f")
+                elif key == "updated_at":
+                    self.updated_at = datetime.strptime(value, "%Y-%m-%dT%H:%M:%S.%f")
+                elif key == 'id':
+                    self.id = value
                 else:
-                    self.key = value
+                    self.__dict__[key] = value
         else:
             self.id = str(uuid4())
             self.created_at = datetime.utcnow()
             self.updated_at = self.created_at
-            models.storage.new(self)
+        models.storage.new(self)
     def save(self):
         models.storage.save()
     def __str__(self):
