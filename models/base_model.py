@@ -48,8 +48,7 @@ class BaseModel:
             f.write(json.dumps(list_of_dicts))
 
     def to_dict(self):
-        '''return dictionary of object's attributes
-        '''
+        '''return dictionary of object's attributes'''
         mydict = self.__dict__.copy()
         mydict["__class__"] = "BaseModel"
         mydict["updated_at"] = self.updated_at.isoformat()
