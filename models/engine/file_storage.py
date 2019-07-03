@@ -20,6 +20,10 @@ class FileStorage:
         '''
         return FileStorage.__objects
 
+    def save(self):
+        '''dummy method'''
+        pass
+
     def new(self, obj):
         '''insert new objects into dict of all objects
         '''
