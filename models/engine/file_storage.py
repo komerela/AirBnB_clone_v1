@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 '''This module contains one class, FileStorage
 '''
+import datetime
 import json
 from models.base_model import BaseModel
 
@@ -22,7 +23,11 @@ class FileStorage:
 
     def save(self):
         '''dummy method'''
-        pass
+        self.updated_at = datetime.datetime.utcnow()
+        list_of_dicts = [obj.to_dict() for (key, obj) in
+                         FileStorage.__objects.items()]
+        with open(FileStorage.__file_path, "w+", encoding="utf-8") as f:
+            f.write(json.dumps(list_of_dicts))
 
     def new(self, obj):
         '''insert new objects into dict of all objects
