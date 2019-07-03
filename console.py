@@ -22,13 +22,13 @@ class HBNBCommand(cmd.Cmd):
     prompt = '(hbnb) '
     file = None
     __allowed_classes = ('BaseModel', 'User', 'Amenity',
-                        'State', 'Place', 'City', 'Review')
+                         'State', 'Place', 'City', 'Review')
 
     @staticmethod
     def allowed_classes():
         '''The classes we allow eval() to evaluate upon reload'''
         return HBNBCommand.__allowed_classes
-    
+
     def from_json_string(json_string):
         '''convert json string of obj dicts into list of same'''
         if json_string is None or json_string == "":
@@ -55,6 +55,7 @@ class HBNBCommand(cmd.Cmd):
         if self.file:
             self.file.close()
             self.file = None
+
     def emptyline(self):
         '''Do nothing if empty newline'''
         pass
@@ -103,7 +104,7 @@ class HBNBCommand(cmd.Cmd):
                 for each_dict in li0t_of_dicts:
                     list_objects.append(str(each_dict))
                 print(list_objects)
-        elif not line in HBNBCommand.allowed_classes():
+        elif line not in HBNBCommand.allowed_classes():
             print("** class doesn't exist **")
         else:
             list_objects = []
