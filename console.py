@@ -107,7 +107,9 @@ class HBNBCommand(cmd.Cmd):
         else:
             list_objects = []
             for (key, obj) in models.storage.all().items():
-                list_objects.append(str(obj))
+                name = key.split('.')[0]
+                if name == args[0]:
+                    list_objects.append(str(obj))
             print(list_objects)
 
 if __name__ == "__main__":
