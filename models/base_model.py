@@ -42,14 +42,10 @@ class BaseModel:
         '''save all objects into json file
         '''
         self.updated_at = datetime.utcnow()
-        list_of_dicts = [obj.to_dict() for (key, obj) in
-                         models.storage.all().items()]
-        with open(models.storage.file_path(), "w+", encoding="utf-8") as f:
-            f.write(json.dumps(list_of_dicts))
+        models.storage.save()
 
     def to_dict(self):
-        '''return dictionary of object's attributes
-        '''
+        '''return dictionary of object's attributes'''
         mydict = self.__dict__.copy()
         mydict["__class__"] = "BaseModel"
         mydict["updated_at"] = self.updated_at.isoformat()
