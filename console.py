@@ -86,11 +86,11 @@ class HBNBCommand(cmd.Cmd):
         elif len(args) < 1:
             print("** instance id missing **")
         id_exists = 0
-        for key in models.storage.all().keys():
+        for (key, value) in models.storage.all().items():
             classname_then_id = str(key).split('.')
             if len(args) > 1 and args[1] in classname_then_id:
                 id_exists = 1
-                print(models.storage.objects[(args[0] + "." + args[1])])
+                print(value)
         if id_exists == 0:
             print("** no instance found **")
 
@@ -99,21 +99,16 @@ class HBNBCommand(cmd.Cmd):
         args = line.split()
         if len(args) < 1:
             list_objects = []
-            with open("file.json", mode="r") as f:
-                list_of_dicts = HBNBCommand.from_json_string(f.read())
-                for each_dict in li0t_of_dicts:
-                    list_objects.append(str(each_dict))
-                print(list_objects)
+            for (key, obj) in models.storage.all().items():
+                list_objects.append(str(obj))
+            print(list_objects)
         elif line not in HBNBCommand.allowed_classes():
             print("** class doesn't exist **")
         else:
             list_objects = []
-            with open("file.json", mode="r") as f:
-                list_of_dicts = HBNBCommand.from_json_string(f.read())
-                for each_dict in list_of_dicts:
-                    list_objects.append(str(each_dict))
-                print(list_objects)
-
+            for (key, obj) in models.storage.all().items():
+                list_objects.append(str(obj))
+            print(list_objects)
 
 if __name__ == "__main__":
     HBNBCommand().cmdloop()
