@@ -46,6 +46,7 @@ class BaseModel:
                          models.storage.all().items()]
         with open(models.storage.file_path(), "w+", encoding="utf-8") as f:
             f.write(json.dumps(list_of_dicts))
+        storage.save()
 
     def to_dict(self):
         '''return dictionary of object's attributes'''
