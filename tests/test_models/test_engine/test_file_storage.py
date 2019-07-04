@@ -22,3 +22,21 @@ class Test_file_storage_class(unittest.TestCase):
         self.assertTrue(models.storage.save)
         self.assertTrue(models.storage.new)
         self.assertTrue(models.storage.reload)
+
+    def test_storage_instance_FileStorage(self):
+        """ test that storage is an instance of FileStorage"""
+        self.assertTrue(isinstance(models.storage, FileStorage))
+
+    def test_file(self):
+        """ test if json file exist"""
+        self.assertTrue(os.path.isfile('file.json'))
+
+    def test_reload_file(self):
+        ''' Checks that nothing happens when reload called and
+            file.json does not exist
+        '''
+        try:
+            models.storage.reload()
+            self.assertTrue(True)
+        except:
+            self.assertTrue(False)
