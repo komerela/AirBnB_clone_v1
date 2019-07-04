@@ -50,5 +50,4 @@ class BaseModel:
         mydict["__class__"] = "BaseModel"
         mydict["updated_at"] = self.updated_at.isoformat()
         mydict["created_at"] = self.created_at.isoformat()
-
         return mydict
