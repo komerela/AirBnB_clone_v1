@@ -115,7 +115,6 @@ class HBNBCommand(cmd.Cmd):
                     list_objects.append(str(obj))
             print(list_objects)
 
-
     def do_destroy(self, line):
         """ method that deletes class individual instance """
         args = line.split()
