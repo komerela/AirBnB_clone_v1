@@ -81,10 +81,13 @@ class HBNBCommand(cmd.Cmd):
         args = arg.split()
         if not args or len(args) == 0:
             print("** class name missing **")
+            return
         elif args[0] not in HBNBCommand.allowed_classes():
             print("** class doesn't exist **")
-        elif len(args) < 1:
+            return
+        elif len(args) < 2:
             print("** instance id missing **")
+            return
         id_exists = 0
         for (key, value) in models.storage.all().items():
             classname_then_id = str(key).split('.')
@@ -111,6 +114,31 @@ class HBNBCommand(cmd.Cmd):
                 if name == args[0]:
                     list_objects.append(str(obj))
             print(list_objects)
+
+
+    def do_destroy(self, line):
+        """ method that deletes class individual instance """
+        args = line.split()
+        if len(args) == 0:
+            print("** class name missing **")
+            return
+        if len(args) == 1:
+            print("** instance id missing **")
+            return
+        if args[0] not in HBNBCommand.allowed_classes():
+            print("** class doesn't exist **")
+            return
+        my_deletable_key = 0
+        c_name = args[0]
+        c_id = args[1]
+        for (key, value) in models.storage.all().items():
+            if key == c_name + "." + c_id:
+                my_deletable_key = key
+        if my_deletable_key == 0:
+            print("** no instance found **")
+        else:
+            del models.storage.all()[my_deletable_key]
+            models.storage.save()
 
 if __name__ == "__main__":
     HBNBCommand().cmdloop()
