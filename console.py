@@ -140,5 +140,14 @@ class HBNBCommand(cmd.Cmd):
             del models.storage.all()[my_deletable_key]
             models.storage.save()
 
+    def do_update(self, line):
+        '''update attributes of an instance'''
+        args = line.split()
+        classname = args[0]
+        obj_id = args[1]
+        attr = args[2]
+        value = args[3].strip('\"')
+        models.storage.all()[classname + '.' + obj_id].__dict__[attr] = value
+
 if __name__ == "__main__":
     HBNBCommand().cmdloop()
