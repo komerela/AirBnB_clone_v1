@@ -2,12 +2,14 @@
 """
     Unittest for Base class
 """
+
 import unittest
 from models.base_model import BaseModel
 
 
 class Test_base_model_class(unittest.TestCase):
     """ Unittest for Base class"""
+
     b = BaseModel()
     a = BaseModel()
     c = BaseModel()
@@ -38,5 +40,10 @@ class Test_base_model_class(unittest.TestCase):
             being changed
         """
         self.b.save()
-        self.assertNotEqual(self.b.created_at,
-                            self.b.updated_at)
+        self.assertNotEqual(self.b.created_at, self.b.updated_at)
+
+    def test_unique_id(self):
+        """ test to see if unique id's are created with a large number"""
+        random = [BaseModel().id for x in range(700)]
+        len(set(random)) == len(random)
+        self.assertTrue(self, BaseModel().id)
