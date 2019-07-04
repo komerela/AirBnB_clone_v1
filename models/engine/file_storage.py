@@ -27,7 +27,7 @@ class FileStorage:
 
     def file_path(self):
         '''The path of the json file being loaded'''
-        return FileStorage.__file_path
+        return self.__file_path
 
     def all(self):
         '''Return dict of all objects
@@ -45,8 +45,7 @@ class FileStorage:
     def new(self, obj):
         '''insert new objects into dict of all objects
         '''
-        FileStorage.__objects['{}.{}'.format(obj.__class__.__name__,
-                              obj.id)] = obj
+        self.__objects[obj.__class__.__name__ + "." + obj.id] = obj
 
     def reload(self):
         '''reload objects from a json file
@@ -56,12 +55,7 @@ class FileStorage:
                 list_of_dicts = FileStorage.from_json_string(f.read())
         except FileNotFoundError:
             list_of_dicts = []
-        for each in list_of_dicts:
-
-            # use eval to make this flexible
-            BaseModel(each)
         for each_dict in list_of_dicts:
-            # use eval to make this flexible
             if each_dict['__class__'] in FileStorage.allowed_classes():
                 class_name = each_dict['__class__']
                 executable = '{}(**{})'.format(class_name, each_dict)
