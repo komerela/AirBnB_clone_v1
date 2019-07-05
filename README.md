@@ -97,7 +97,7 @@ For example in testing for unit tests for our BaseModel Class we used the follow
 
    **class methods str, save, to_dict**
 
-![BaseModel class](https://github.com/Rmolimock/AirBnB_clone/blob/master/Readme_images/str%20save%20dict%20classes.png) - Public instance class methods
+![BaseModel class](https://github.com/Rmolimock/AirBnB_clone/blob/master/Readme_images/BaseModel_class.png) - Public instance class methods
 
 	- def __str__() returns string representation of an instance
 	- def save() saves an instance and calls the storage instance to save to file
