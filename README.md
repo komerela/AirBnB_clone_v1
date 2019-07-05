@@ -103,24 +103,6 @@ For example in testing for unit tests for our BaseModel Class we used the follow
 	- def save() saves an instance and calls the storage instance to save to file
 	- def to_dict returns a dictionary containing instance attributes
 
-
-### [4. Create BaseModel from dictionary](./AirBnB_clone)
-
-	**to_dict()**
-
-	- generate a dictionary representation of an instance as can be seen in the update in our __init__.py file
-
-### [5. Store first object](./AirBnB_clone)
-
-* Implement the exit built in that exits the shell 0.3+
-
-### [6. Console 0.0.1](./AirBnB_clonel)
-
-* Implement the shell build in, that prints the current environment
-
-### [7. Console 0.1](./AirBnB_clone)
-
-
 ---
 
 ## Resources
@@ -130,14 +112,22 @@ For example in testing for unit tests for our BaseModel Class we used the follow
 <li>https://www.quora.com/What-is-the-difference-between-a-function-call-and-a-system-call-in-an-operating-system</li>
 <li>
 
+<<<<<<< HEAD
 ## Shout outs!
 <ol>
 <li>[](https://github.com/abmcbride5)</li>
 <li>[](https://github.com/renefibonacci660)</li>
 </ol>
+=======
+>>>>>>> b6c69c5392ee05232681ec9dd896ad4c0457ebba
 
 ## Authors
 * **Koome Mwiti** - [komerela](https://github.com/komerela)
 * **LinkedIn** - [koomemwiti](www.linkedin.com/in/koomemwiti)
 
+<<<<<<< HEAD
 * **Russell Molimock** - [Rmolimock](https://github.com/Rmolimock)
+=======
+* **Russell Mullimock** - [Rmolimock](https://github.com/Rmolimock)
+* **LinkedIn** - [rmolimock](www.linkedin.com/in/russellmolimock)
+>>>>>>> b6c69c5392ee05232681ec9dd896ad4c0457ebba
