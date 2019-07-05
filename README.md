@@ -27,8 +27,8 @@ The image below demonstrates what this entire project will entail.
 <li>How to write and read a JSON file</li>
 <li>How to manage datetime</li>
 <li>What is an UUID</li>
-<li>What is *args and how to use it</li>
-<li>What is **kwargs and how to use it</li>
+<li>What is args and how to use it</li>
+<li>What is kwargs and how to use it</li>
 <li>How to handle named arguments in a function</li>
 </ul>
 
@@ -47,7 +47,7 @@ The image below demonstrates what this entire project will entail.
 
 * A beautiful code that passes the pep8 formatting compliance checks.
 
-## [2. Unittests](./AirBnB_clone/tests/test_models/
+## [2. Unittests](./AirBnB_clone/tests/test_models/)
 
 * A test suite is a collection of test cases, test suites, or both. It is used to aggregate tests that should be executed together. In this project we utilized several tests for the different python class methods that we utilized in our functions to check for any edge cases that would break or check for possible improvements.
 
@@ -93,11 +93,11 @@ For example in testing for unit tests for our BaseModel Class we used the follow
 	
 	- The __init__.py files are required to make Python treat directories containing the file as packages. This prevents directories with a common name, such as string , unintentionally hiding valid modules that occur later on the module search path
 
-	![Base Class __init__ file](https://github.com/Rmolimock/AirBnB_clone/blob/master/Readme_images/__init__%20example.png)
+![Base Class __init__ file](https://github.com/Rmolimock/AirBnB_clone/blob/master/Readme_images/__init__%20example.png)
 
    **class methods str, save, to_dict**
 
-	![BaseModel class](https://github.com/Rmolimock/AirBnB_clone/blob/master/Readme_images/str%20save%20dict%20classes.png) - Public instance class methods
+![BaseModel class](https://github.com/Rmolimock/AirBnB_clone/blob/master/Readme_images/str%20save%20dict%20classes.png) - Public instance class methods
 
 	- def __str__() returns string representation of an instance
 	- def save() saves an instance and calls the storage instance to save to file
@@ -105,29 +105,18 @@ For example in testing for unit tests for our BaseModel Class we used the follow
 
 ---
 
-## Resources
-<ol>
-<li>https://cvw.cac.cornell.edu/Linux/howwork</li>
-<li>https://stackoverflow.com/questions/30493424/what-is-the-difference-between-a-process-pid-ppid-uid-euid-gid-and-egid</li>
-<li>https://www.quora.com/What-is-the-difference-between-a-function-call-and-a-system-call-in-an-operating-system</li>
-<li>
 
-<<<<<<< HEAD
 ## Shout outs!
 <ol>
 <li>[](https://github.com/abmcbride5)</li>
 <li>[](https://github.com/renefibonacci660)</li>
 </ol>
 =======
->>>>>>> b6c69c5392ee05232681ec9dd896ad4c0457ebba
 
 ## Authors
 * **Koome Mwiti** - [komerela](https://github.com/komerela)
 * **LinkedIn** - [koomemwiti](www.linkedin.com/in/koomemwiti)
 
-<<<<<<< HEAD
-* **Russell Molimock** - [Rmolimock](https://github.com/Rmolimock)
 =======
 * **Russell Mullimock** - [Rmolimock](https://github.com/Rmolimock)
 * **LinkedIn** - [rmolimock](www.linkedin.com/in/russellmolimock)
->>>>>>> b6c69c5392ee05232681ec9dd896ad4c0457ebba
