@@ -85,7 +85,7 @@ For example in testing for unit tests for our BaseModel Class we used the follow
 
 - Defines all common attributes/methods for other classes
 
-- ![Base class](https://github.com/Rmolimock/AirBnB_clone/blob/master/models/base_model.py)
+![Base class](https://github.com/Rmolimock/AirBnB_clone/blob/master/models/base_model.py)
 
 ## What does it contain for it to run?
 
