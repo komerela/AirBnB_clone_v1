@@ -85,7 +85,8 @@ For example in testing for unit tests for our BaseModel Class we used the follow
 
 - Defines all common attributes/methods for other classes
 
-![Base class](https://github.com/Rmolimock/AirBnB_clone/blob/master/models/base_model.py)
+![BaseModel Class](https://github.com/Rmolimock/AirBnB_clone/blob/master/Readme_images/BaseModel_class.png)
+
 
 ### What does it contain for it to run?
 
@@ -97,7 +98,7 @@ For example in testing for unit tests for our BaseModel Class we used the follow
 
    **class methods str, save, to_dict**
 
-![BaseModel class](https://github.com/Rmolimock/AirBnB_clone/blob/master/Readme_images/BaseModel_class.png) - Public instance class methods
+	 - Public instance class methods
 
 	- def __str__() returns string representation of an instance
 	- def save() saves an instance and calls the storage instance to save to file
