@@ -2,7 +2,7 @@
 
 ![Just a hotel (courtesy Holberton & Koome Mwiti)](https://github.com/Rmolimock/AirBnB_clone/blob/master/Readme_images/Screen%20Shot%202019-07-04%20at%205.24.23%20PM.png)
 
-### Description
+## Description
 This is the first step towards building your first full web application: the AirBnB clone. For the end-user to be able to interact with a fully functioning AirBnB clone we must be able to finalize the backend and the front end which will involve building;
 
 The image below demonstrates what this entire project will entail.
@@ -17,7 +17,7 @@ The image below demonstrates what this entire project will entail.
 * Front-end (Client facing) e.g Javascript, HTML 
 
 
-## What you should learn from this initial AirBnB clone project:
+### What you should learn from this initial AirBnB clone project:
 
 <ul>
 <li>How to create a Python package</li>
@@ -35,23 +35,23 @@ The image below demonstrates what this entire project will entail.
 
 
 
-## [0. README](./README.md)
+### [0. README](./README.md)
 
 * A README file that describes the AirBnB clone project
 
-## [0. AUTHORS Acknowledgement](./AUTHORS)
+### [0. AUTHORS Acknowledgement](./AUTHORS)
 
 * This file details contacts of the authors of this shell project and contributors as per the git commits
 
-## [1. Be PEP8 compliant!](./AirBnB_clone/)
+### [1. Be PEP8 compliant!](./AirBnB_clone/)
 
 * A beautiful code that passes the pep8 formatting compliance checks.
 
-## [2. Unittests](./AirBnB_clone/tests/test_models/)
+### [2. Unittests](./AirBnB_clone/tests/test_models/)
 
 * A test suite is a collection of test cases, test suites, or both. It is used to aggregate tests that should be executed together. In this project we utilized several tests for the different python class methods that we utilized in our functions to check for any edge cases that would break or check for possible improvements.
 
-## Unittests repository set-up
+### Unittests repository set-up
 
 **Repo set-up**
 
@@ -87,7 +87,7 @@ For example in testing for unit tests for our BaseModel Class we used the follow
 
 ![Base class](https://github.com/Rmolimock/AirBnB_clone/blob/master/models/base_model.py)
 
-## What does it contain for it to run?
+### What does it contain for it to run?
 
     **__init__.py file**
 	
@@ -106,14 +106,14 @@ For example in testing for unit tests for our BaseModel Class we used the follow
 ---
 
 
-## Shout outs!
+### Shout outs!
 <ol>
 <li>[](https://github.com/abmcbride5)</li>
 <li>[](https://github.com/renefibonacci660)</li>
 </ol>
 =======
 
-## Authors
+### Authors
 * **Koome Mwiti** - [komerela](https://github.com/komerela)
 * **LinkedIn** - [koomemwiti](www.linkedin.com/in/koomemwiti)
 
