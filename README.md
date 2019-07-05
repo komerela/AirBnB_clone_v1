@@ -1,13 +1,13 @@
 # AirBnB clone - The console
 
-![Just a hotel (courtesy Holberton & Koome Mwiti)](https://github.com/komerela/Code_tester/blob/master/https://github.com/komerela/Code_tester/blob/master/Screen%20Shot%202019-07-04%20at%205.24.23%20PM.png)
+![Just a hotel (courtesy Holberton & Koome Mwiti)](https://github.com/Rmolimock/AirBnB_clone/blob/master/Readme_images/Screen%20Shot%202019-07-04%20at%205.24.23%20PM.png)
 
 ### Description
 This is the first step towards building your first full web application: the AirBnB clone. For the end-user to be able to interact with a fully functioning AirBnB clone we must be able to finalize the backend and the front end which will involve building;
 
 The image below demonstrates what this entire project will entail.
 
-![AirBnB Clone process (courtesy Holberton)](https://github.com/komerela/Code_tester/blob/master/https://github.com/komerela/Code_tester/blob/master/AirBnB%20Clone%20process.png)
+![AirBnB Clone process (courtesy Holberton)](https://github.com/Rmolimock/AirBnB_clone/blob/master/Readme_images/AirBnB%20Clone%20process.png)
 
 * The console
 * The Storage Engines e.g. JSON, MySQL
@@ -66,7 +66,7 @@ The image below demonstrates what this entire project will entail.
 
 For example in testing for unit tests for our BaseModel Class we used the following edge cases
 
-![BaseModel Class Unittests](https://github.com/komerela/Code_tester/blob/master/https://github.com/komerela/Code_tester/blob/master/test_base_model%20unittests.png) BaseModel Unittests
+![BaseModel Class Unittests](https://github.com/Rmolimock/AirBnB_clone/blob/master/Readme_images/unittest_image.png) BaseModel Unittests
 
 <ul>
 <li> What other unittests did we develop to test our project? </li>
@@ -93,11 +93,11 @@ For example in testing for unit tests for our BaseModel Class we used the follow
 	
 	- The __init__.py files are required to make Python treat directories containing the file as packages. This prevents directories with a common name, such as string , unintentionally hiding valid modules that occur later on the module search path
 
-	![Base Class __init__ file](https://github.com/komerela/Code_tester/blob/master/__init__%20example.png)
+	![Base Class __init__ file](https://github.com/Rmolimock/AirBnB_clone/blob/master/Readme_images/__init__%20example.png)
 
    **class methods str, save, to_dict**
 
-	![BaseModel class](https://github.com/komerela/Code_tester/blob/master/str%20save%20dict%20classes.png) - Public instance class methods
+	![BaseModel class](https://github.com/Rmolimock/AirBnB_clone/blob/master/Readme_images/str%20save%20dict%20classes.png) - Public instance class methods
 
 	- def __str__() returns string representation of an instance
 	- def save() saves an instance and calls the storage instance to save to file
@@ -132,15 +132,12 @@ For example in testing for unit tests for our BaseModel Class we used the follow
 
 ## Shout outs!
 <ol>
-<li>[](https://github.com/username) - comments here</li>
-<li>[](https://github.com/username) - comments here</li>
-<li>[](https://github.com/username) - comments here</li>
-<li>[](https://github.com/username) - comments here</li>
+<li>[](https://github.com/abmcbride5)</li>
+<li>[](https://github.com/renefibonacci660)</li>
 </ol>
 
 ## Authors
 * **Koome Mwiti** - [komerela](https://github.com/komerela)
 * **LinkedIn** - [koomemwiti](www.linkedin.com/in/koomemwiti)
 
-* **Russell Mullimock** - [Rmolimock](https://github.com/Rmolimock)
-* **LinkedIn** - [link here)
+* **Russell Molimock** - [Rmolimock](https://github.com/Rmolimock)
