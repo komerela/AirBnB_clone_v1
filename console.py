@@ -158,6 +158,7 @@ class HBNBCommand(cmd.Cmd):
                 print("** no instance found **")
             att, val = args[2], args[3].strip('\"')
             models.storage.all()[classname + '.' + obj_id].__dict__[att] = val
+            models.storage.all()[classname + '.' + obj_id].save()
 
 if __name__ == "__main__":
     HBNBCommand().cmdloop()
