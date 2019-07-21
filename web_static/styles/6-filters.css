@@ -1,0 +1,94 @@
+@charset "UTF-8";
+
+/** CSS styles
+ *  filters file
+ *
+ */
+
+ div.container section.filters {
+    width: 100%;
+    height: 70px;
+    border: 1px solid #DDDDDD;
+    border-radius: 4px;
+    background-color: white;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* align-items: stretch; */
+    box-sizing: border-box;
+    /* border: 1px solid blue; */
+ }
+ div.container section.filters div.locations, 
+ div.container section.filters div.amenities {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     padding-left: 30px;
+     box-sizing: border-box;
+     height: 100%;
+     width: 25%;
+     position: relative;
+     
+         
+ }
+ div.container section.filters div:first-child {
+     border-right: 1px solid #DDDDDD;
+ }
+ div.container section.filters div h3 {
+     font-weight: 600;
+     margin-left: 3px;
+ }
+
+ div.container section.filters div h4 {
+     font-weight: 400;
+     font-size: 14px;
+     padding: 2px;
+ }
+ div.container section.filters button {
+     font-size: 18px;
+     background-color: #FF5A5F;
+     color: #FFFFFF;
+     height: 48px;
+     width: 20%;
+     border-radius: 4px;
+     border: none;
+     position: relative;
+     right: 30px;
+     float: right;
+     margin-left: auto;
+ }
+
+ div.container section.filters button:hover {
+     opacity: 0.9;
+ }
+
+
+ div.container section.filters div.locations ul.popover,
+ div.container section.filters div.amenities ul.popover {
+     position: absolute;
+     top: -2px;
+     left: -1px;
+     padding: 30px 0 30px 30px;
+     box-sizing: border-box;  
+     list-style: none;
+     border: 1px solid #DDDDDD;
+     border-radius: 4px;
+     Background-color: #FAFAFA;
+     width: calc(100% + 2px);
+     z-index: 1;
+     margin-top: 70px;
+     display: none;
+    }
+
+    div.container section.filters div.locations:hover ul.popover{
+        display: block;
+    }
+ div.container section.filters div.amenities:hover ul.popover {
+     display: inline-block;
+ }
+
+    div.container section.filters div.locations ul.popover ul {
+        list-style: none;
+    }

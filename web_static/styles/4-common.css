@@ -1,0 +1,48 @@
+@charset "UTF-8";
+
+/** CSS styles
+ *  Common
+ *
+ */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    /* display: flex;
+    flex-direction: column; */
+    margin: 0;
+    padding: 0;
+    /* min-height: 100vh; */
+    height: 100%;
+    width: 100%;
+    color: #484848;
+    font-size: 14px;
+    font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    /* align-items: center; */
+    /* margin-bottom: 20px; */
+    
+}
+
+main {
+    flex-grow: 1;
+    flex-shrink: 0;
+}
+
+div.container {
+  /*  border: 1px solid red; */
+    max-width: 1000px;
+    width: 100%;
+    margin: 30px auto;
+    /* display: flex; 
+    flex-direction: column; */
+    /* align-items: stretch; */
+
+}
